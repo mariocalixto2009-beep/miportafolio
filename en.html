@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio - David VFX</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="animated-gradient-layer"></div>
+  <div id="particles-background"></div>
+  
+  <div class="circle-anim-wrapper">
+    <ul class="circles">
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+  </div>
+
+  <header class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">Creativity</div>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#about">About Me</a>
+        <a href="#tools">Tools</a>
+        <a href="#trabajo">My Work</a>
+        <a href="#reels">Shorts</a>
+        <a href="#contact">Contact</a>
+        <a href="index.html" class="lang-switch" title="Switch to Spanish">🇪🇸 ES</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="hero" aria-labelledby="hero-title">
+      <div class="gif-box"></div>
+      <div class="hero-box">
+        <h1 id="hero-title" class="hero-title">DAVID VFX</h1>
+      </div>
+      <p class="about-text">
+        Gameplay Video Editor, focused on achieving excellent audience retention.
+      </p>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="tools" class="tools-section" aria-label="Tools">
+      <div class="tools-container">
+        <div class="tool">
+          <img class="tool-icon" src="assets/icons/premiere.png" alt="Premiere Pro">
+          <div class="tool-name">Premiere Pro</div>
+        </div>
+        <div class="tool">
+          <img class="tool-icon" src="assets/icons/after-effects.png" alt="After Effects">
+          <div class="tool-name">After Effects</div>
+        </div>
+        <div class="tool">
+          <img class="tool-icon" src="assets/icons/audacity.png" alt="Audacity">
+          <div class="tool-name">Audacity</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="trabajo" class="full-black" aria-labelledby="trabajo-title">
+      <div class="trabajo-inner">
+        <div class="section-title-box">
+          <div class="hero-box">
+            <h2 id="trabajo-title">My Work</h2>
+          </div>
+        </div>
+        <div class="title-separator" aria-hidden="true"></div>
+
+        <article class="video-item" id="video-counter-section">
+          
+          <div class="views-badge">
+            <span class="fire-icon">🔥</span> 
+            OVER <span id="counter-number">0</span>K VIEWS
+          </div>
+
+          <video class="video-media" autoplay muted loop playsinline controls preload="metadata">
+            <source src="assets/videos/gameplay1.mp4" type="video/mp4">
+            Your browser does not support this video.
+          </video>
+          
+          <div class="video-info">
+            <h3>Recent Videos</h3>
+            <p>
+              A look at one of my latest works that has achieved excellent results
+              <a href="https://www.youtube.com/watch?v=TZ9EAyi-E3A" target="_blank" class="check-it-link">Check it out!</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="video-item reverse">
+          <video class="video-media" autoplay muted loop playsinline controls preload="metadata">
+            <source src="assets/videos/gameplay2.mp4" type="video/mp4">
+            Your browser does not support this video.
+          </video>
+          <div class="video-info">
+            <h3>ROBLOX Gameplay</h3>
+            <p>Dynamic and dopamine-inducing editing for your Roblox gameplays :)</p>
+          </div>
+        </article>
+
+        <article class="video-item">
+          <video class="video-media" autoplay muted loop playsinline controls preload="metadata">
+            <source src="assets/videos/gameplay3.mp4" type="video/mp4">
+            Your browser does not support this video.
+          </video>
+          <div class="video-info">
+            <h3>DYNAMIC ANIMATIONS</h3>
+            <p>Eye-catching animations, a more upbeat style.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="separator-wide" style="height:12px; opacity:.06;"></div>
+
+    <section id="reels" aria-labelledby="reels-title">
+      <div class="hero-box">
+        <h2 id="reels-title">Shorts</h2>
+      </div>
+      <div class="title-separator" style="margin:14px auto 0;"></div>
+
+      <div class="reels-grid-static">
+        <div class="reel-card">
+          <video class="reel-media" autoplay muted loop playsinline controls preload="metadata">
+              <source src="assets/videos/reel1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="reel-card">
+           <video class="reel-media" autoplay muted loop playsinline controls preload="metadata">
+              <source src="assets/videos/reel2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="hero-box">
+        <h2 id="contact-title">Ready to work with me?</h2>
+      </div>
+      <p>Contact me and let's get started!</p>
+
+      <div class="contact-grid">
+        <div class="contact-card" data-copy="david24stq@gmail.com">
+          <img src="assets/icons/gmail.png" alt="Gmail">
+          <span>david24stq@gmail.com</span>
+        </div>
+        <div class="contact-card" data-copy="txxx24">
+          <img src="assets/icons/discord.png" alt="Discord">
+          <span>txxx24</span>
+        </div>
+        <div class="contact-card" data-copy="+584247677278">
+          <img src="assets/icons/whatsapp.png" alt="Whatsapp">
+          <span>+58 424-7677278</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="copy-popup" class="copy-popup"></div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+  particlesJS("particles-background", {
+    "particles": { "number": { "value": 80 }, "size": { "value": 3 }, "move": { "speed": 1 }, "line_linked": { "enable": true, "opacity": 0.2 }, "color": { "value": "#ffffff" } },
+    "interactivity": { "events": { "onhover": { "enable": true, "mode": "repulse" } } }
+  });
+
+  const text = "DAVID VFX";
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("hero-title").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 120);
+    }
+  }
+  document.getElementById("hero-title").innerHTML = "";
+  typeWriter();
+  document.querySelector(".about-text").classList.add("fade-in");
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
