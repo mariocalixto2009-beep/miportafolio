@@ -4,8 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portafolio - David VFX</title>
+  
+  <!-- Optimización: Preconnect para fuentes más rápidas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -29,19 +34,22 @@
         <a href="#trabajo">Mi trabajo</a>
         <a href="#reels">Reels</a>
         <a href="#contact">Contacto</a>
-        <a href="en.html" class="lang-switch" title="Switch to English">🇺🇸 EN</a>
+        <!-- Se reemplazó el emoji por imagen de bandera -->
+        <a href="en.html" class="lang-switch" title="Switch to English">
+          <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon" loading="lazy"> EN
+        </a>
       </nav>
     </div>
   </header>
 
   <main>
     <section id="about" class="hero" aria-labelledby="hero-title">
-      <div class="gif-box"></div>
       <div class="hero-box">
         <h1 id="hero-title" class="hero-title">DAVID VFX</h1>
       </div>
+      
       <p class="about-text">
-        Editor especializado en Gameplays, logrando una retención de audiencia excelente.
+        Editor versátil adaptado a tu nicho y medida ;)
       </p>
     </section>
 
@@ -50,15 +58,15 @@
     <section id="tools" class="tools-section" aria-label="Herramientas">
       <div class="tools-container">
         <div class="tool">
-          <img class="tool-icon" src="assets/icons/premiere.png" alt="Premiere Pro">
+          <img class="tool-icon" src="assets/icons/premiere.png" alt="Premiere Pro" loading="lazy">
           <div class="tool-name">Premiere Pro</div>
         </div>
         <div class="tool">
-          <img class="tool-icon" src="assets/icons/after-effects.png" alt="After Effects">
+          <img class="tool-icon" src="assets/icons/after-effects.png" alt="After Effects" loading="lazy">
           <div class="tool-name">After Effects</div>
         </div>
         <div class="tool">
-          <img class="tool-icon" src="assets/icons/audacity.png" alt="Audacity">
+          <img class="tool-icon" src="assets/icons/audacity.png" alt="Audacity" loading="lazy">
           <div class="tool-name">Audacity</div>
         </div>
       </div>
@@ -77,9 +85,9 @@
 
         <article class="video-item" id="video-counter-section">
           <div class="views-badge">
-  <span class="fire-icon">🔥</span> 
-  MÁS DE <span id="counter-number">0</span>MIL VISTAS
-</div>
+            <span class="fire-icon">🔥</span> 
+            MÁS DE <span id="counter-number">0</span>MIL VISTAS
+          </div>
           <video class="video-media" autoplay muted loop playsinline controls preload="metadata">
             <source src="assets/videos/gameplay1.mp4" type="video/mp4">
             Tu navegador no soporta este video.
@@ -100,7 +108,7 @@
           </video>
           <div class="video-info">
             <h3>Gameplay ROBLOX</h3>
-            <p>Edicion dinamica y dopaminica para tus gameplays de roblox :) </p>
+            <p>Edición dinámica y dopamínica para tus gameplays de roblox :)</p>
           </div>
         </article>
 
@@ -111,7 +119,7 @@
           </video>
           <div class="video-info">
             <h3>ANIMACIONES DINÁMICAS</h3>
-            <p>Animaciones llamativas un estilo mas movido.</p>
+            <p>Animaciones llamativas, un estilo más movido.</p>
           </div>
         </article>
       </div>
@@ -130,11 +138,13 @@
           <video class="reel-media" autoplay muted loop playsinline controls preload="metadata">
               <source src="assets/videos/reel1.mp4" type="video/mp4">
           </video>
+          <div class="reel-caption">Showcase de ROBLOX</div>
         </div>
         <div class="reel-card">
            <video class="reel-media" autoplay muted loop playsinline controls preload="metadata">
               <source src="assets/videos/reel2.mp4" type="video/mp4">
           </video>
+          <div class="reel-caption">Showcase de ROBLOX</div>
         </div>
       </div>
     </section>
@@ -147,15 +157,15 @@
 
       <div class="contact-grid">
         <div class="contact-card" data-copy="david24stq@gmail.com">
-          <img src="assets/icons/gmail.png" alt="Gmail">
+          <img src="assets/icons/gmail.png" alt="Gmail" loading="lazy">
           <span>david24stq@gmail.com</span>
         </div>
         <div class="contact-card" data-copy="txxx24">
-          <img src="assets/icons/discord.png" alt="Discord">
+          <img src="assets/icons/discord.png" alt="Discord" loading="lazy">
           <span>txxx24</span>
         </div>
         <div class="contact-card" data-copy="+584247677278">
-          <img src="assets/icons/whatsapp.png" alt="Whatsapp">
+          <img src="assets/icons/whatsapp.png" alt="Whatsapp" loading="lazy">
           <span>+58 424-7677278</span>
         </div>
       </div>
@@ -164,30 +174,33 @@
 
   <div id="copy-popup" class="copy-popup"></div>
 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-  particlesJS("particles-background", {
-    "particles": { "number": { "value": 80 }, "size": { "value": 3 }, "move": { "speed": 1 }, "line_linked": { "enable": true, "opacity": 0.2 }, "color": { "value": "#ffffff" } },
-    "interactivity": { "events": { "onhover": { "enable": true, "mode": "repulse" } } }
-  });
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      particlesJS("particles-background", {
+        "particles": { "number": { "value": 80 }, "size": { "value": 3 }, "move": { "speed": 1 }, "line_linked": { "enable": true, "opacity": 0.2 }, "color": { "value": "#ffffff" } },
+        "interactivity": { "events": { "onhover": { "enable": true, "mode": "repulse" } } }
+      });
 
-  const text = "DAVID VFX";
-  let i = 0;
-  function typeWriter() {
-    if (i < text.length) {
-      document.getElementById("hero-title").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 120);
-    }
-  }
-  document.getElementById("hero-title").innerHTML = "";
-  typeWriter();
-  document.querySelector(".about-text").classList.add("fade-in");
-  const userLang = navigator.language || navigator.userLanguage;
-  if (userLang.startsWith('en') && !sessionStorage.getItem('langRedirected')) {
-      sessionStorage.setItem('langRedirected', 'true');
-  }
+      const text = "DAVID VFX";
+      let i = 0;
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("hero-title").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 120);
+        }
+      }
+      document.getElementById("hero-title").innerHTML = "";
+      typeWriter();
+      document.querySelector(".about-text").classList.add("fade-in");
+      
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('en') && !sessionStorage.getItem('langRedirected')) {
+          sessionStorage.setItem('langRedirected', 'true');
+      }
+    });
   </script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

@@ -108,6 +108,26 @@ body {
   background: rgba(255,255,255,0.05); 
 }
 
+/* ESTILOS NUEVOS PARA EL BOTÓN DE IDIOMA / BANDERA */
+.nav-links a.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08); /* Fondo de botón para destacar */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+}
+.nav-links a.lang-switch:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent-cyan);
+}
+.flag-icon {
+  width: 18px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
 /* HERO */
 .hero {
   min-height: 60vh;
@@ -116,7 +136,6 @@ body {
   padding: 80px 20px 40px 20px; 
   gap: 18px;
   position: relative; 
-  
   background: rgba(13, 13, 30, 0.7); 
   border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
   box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
@@ -127,21 +146,33 @@ body {
   width: 100vw; 
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  background: rgba(0, 0, 0, 0.6); 
-  backdrop-filter: blur(10px);
+  
+  /* FONDO Y CORRECCIÓN DE RESOLUCIÓN */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('assets/images/linea1.png');
+  background-size: auto 100%; 
+  background-position: center;
+  background-repeat: repeat-x; 
+  
   border-top: 1px solid rgba(255,255,255,0.15);
   border-bottom: 1px solid rgba(255,255,255,0.15);
   margin-top: 25px;
-  padding: 24px 20px;
+  padding: 24px 20px; 
   display: flex;
   justify-content: center; 
   align-items: center;     
   text-align: center;
+  
   color: #fff;
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.9);
-  opacity: 0; 
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,1), -2px -2px 4px rgba(0,0,0,1), 0 0 15px rgba(0, 245, 255, 0.8); 
+  
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 .hero-title {
@@ -232,8 +263,20 @@ body {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; 
   margin-top: 28px; max-width: 1400px; margin-left: auto; margin-right: auto;
 }
-.reel-card { width: 320px; display: flex; justify-content: center; }
+.reel-card { width: 320px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .reel-card .reel-media { width: 100%; height: 560px; object-fit: cover; border-radius: 12px; }
+.reel-caption {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
 
 /* CONTACTO */
 .contact-section { padding: 80px 20px; text-align: center; background: rgba(0,0,0,0.65); }
@@ -241,7 +284,7 @@ body {
 .contact-card {
   background: rgba(255,255,255,0.05); border-radius: 12px; padding: 28px 36px;
   display: flex; flex-direction: column; align-items: center; gap: 18px;
-  transition: transform 0.25s ease; border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.25s ease; border: 1px solid rgba(255,255,255,0.05); cursor: pointer;
 }
 .contact-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.08); }
 .contact-card img { width: 128px; height: 128px; object-fit: contain; }
@@ -254,6 +297,13 @@ body {
   border-radius: 50px; box-shadow: 0 4px 15px rgba(255, 75, 43, 0.6);
   display: flex; align-items: center; gap: 6px;
 }
+.copy-popup {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: var(--accent-cyan); color: #000; padding: 10px 20px;
+  border-radius: 8px; font-weight: bold; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease; z-index: 9999;
+}
+.copy-popup.show { opacity: 1; }
 
 /* =========================================================
    RESPONSIVIDAD (MEDIA QUERIES)
@@ -268,7 +318,13 @@ body {
   }
   .views-badge { top: -16px; right: 15px; font-size: 0.75rem; }
   .reels-grid-static { gap: 20px; }
-  .reel-card { width: 280px; height: 480px; }
+  .reel-card { width: 280px; }
+  .reel-card .reel-media { height: 480px; }
+  
+  .about-text {
+    padding: 20px 10px;
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -278,5 +334,6 @@ body {
   .nav-links a { font-size: 0.85rem; padding: 4px 8px; }
   body { padding-top: 110px; }
   .views-badge { font-size: 0.65rem; top: -14px; right: 10px; }
-  .reel-card { width: 90vw; height: 160vw; }
+  .reel-card { width: 90vw; }
+  .reel-card .reel-media { height: 160vw; }
 }

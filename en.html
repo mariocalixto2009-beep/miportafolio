@@ -4,8 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio - David VFX</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -29,19 +33,22 @@
         <a href="#trabajo">My Work</a>
         <a href="#reels">Shorts</a>
         <a href="#contact">Contact</a>
-        <a href="index.html" class="lang-switch" title="Switch to Spanish">🇪🇸 ES</a>
+        <!-- Se reemplazó el emoji por imagen de bandera -->
+        <a href="index.html" class="lang-switch" title="Switch to Spanish">
+          <img src="https://flagcdn.com/w20/es.png" alt="Español" class="flag-icon" loading="lazy"> ES
+        </a>
       </nav>
     </div>
   </header>
 
   <main>
     <section id="about" class="hero" aria-labelledby="hero-title">
-      <div class="gif-box"></div>
       <div class="hero-box">
         <h1 id="hero-title" class="hero-title">DAVID VFX</h1>
       </div>
+      
       <p class="about-text">
-        Gameplay Video Editor, focused on achieving excellent audience retention.
+        Versatile editor tailored to your niche and needs ;)
       </p>
     </section>
 
@@ -50,15 +57,15 @@
     <section id="tools" class="tools-section" aria-label="Tools">
       <div class="tools-container">
         <div class="tool">
-          <img class="tool-icon" src="assets/icons/premiere.png" alt="Premiere Pro">
+          <img class="tool-icon" src="assets/icons/premiere.png" alt="Premiere Pro" loading="lazy">
           <div class="tool-name">Premiere Pro</div>
         </div>
         <div class="tool">
-          <img class="tool-icon" src="assets/icons/after-effects.png" alt="After Effects">
+          <img class="tool-icon" src="assets/icons/after-effects.png" alt="After Effects" loading="lazy">
           <div class="tool-name">After Effects</div>
         </div>
         <div class="tool">
-          <img class="tool-icon" src="assets/icons/audacity.png" alt="Audacity">
+          <img class="tool-icon" src="assets/icons/audacity.png" alt="Audacity" loading="lazy">
           <div class="tool-name">Audacity</div>
         </div>
       </div>
@@ -133,11 +140,13 @@
           <video class="reel-media" autoplay muted loop playsinline controls preload="metadata">
               <source src="assets/videos/reel1.mp4" type="video/mp4">
           </video>
+          <div class="reel-caption">ROBLOX Showcase</div>
         </div>
         <div class="reel-card">
            <video class="reel-media" autoplay muted loop playsinline controls preload="metadata">
               <source src="assets/videos/reel2.mp4" type="video/mp4">
           </video>
+          <div class="reel-caption">ROBLOX Showcase</div>
         </div>
       </div>
     </section>
@@ -150,15 +159,15 @@
 
       <div class="contact-grid">
         <div class="contact-card" data-copy="david24stq@gmail.com">
-          <img src="assets/icons/gmail.png" alt="Gmail">
+          <img src="assets/icons/gmail.png" alt="Gmail" loading="lazy">
           <span>david24stq@gmail.com</span>
         </div>
         <div class="contact-card" data-copy="txxx24">
-          <img src="assets/icons/discord.png" alt="Discord">
+          <img src="assets/icons/discord.png" alt="Discord" loading="lazy">
           <span>txxx24</span>
         </div>
         <div class="contact-card" data-copy="+584247677278">
-          <img src="assets/icons/whatsapp.png" alt="Whatsapp">
+          <img src="assets/icons/whatsapp.png" alt="Whatsapp" loading="lazy">
           <span>+58 424-7677278</span>
         </div>
       </div>
@@ -167,26 +176,28 @@
 
   <div id="copy-popup" class="copy-popup"></div>
 
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-  particlesJS("particles-background", {
-    "particles": { "number": { "value": 80 }, "size": { "value": 3 }, "move": { "speed": 1 }, "line_linked": { "enable": true, "opacity": 0.2 }, "color": { "value": "#ffffff" } },
-    "interactivity": { "events": { "onhover": { "enable": true, "mode": "repulse" } } }
-  });
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      particlesJS("particles-background", {
+        "particles": { "number": { "value": 80 }, "size": { "value": 3 }, "move": { "speed": 1 }, "line_linked": { "enable": true, "opacity": 0.2 }, "color": { "value": "#ffffff" } },
+        "interactivity": { "events": { "onhover": { "enable": true, "mode": "repulse" } } }
+      });
 
-  const text = "DAVID VFX";
-  let i = 0;
-  function typeWriter() {
-    if (i < text.length) {
-      document.getElementById("hero-title").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 120);
-    }
-  }
-  document.getElementById("hero-title").innerHTML = "";
-  typeWriter();
-  document.querySelector(".about-text").classList.add("fade-in");
+      const text = "DAVID VFX";
+      let i = 0;
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("hero-title").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 120);
+        }
+      }
+      document.getElementById("hero-title").innerHTML = "";
+      typeWriter();
+      document.querySelector(".about-text").classList.add("fade-in");
+    });
   </script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
